@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/ZiaoLiu.github.io/static/css/main.073c9b0a.css",
-    "main.js": "/ZiaoLiu.github.io/static/js/main.8159712b.js",
+    "main.css": "/ZiaoLiu.github.io/static/css/main.884694fd.css",
+    "main.js": "/ZiaoLiu.github.io/static/js/main.39c92267.js",
     "static/js/787.bc7d429a.chunk.js": "/ZiaoLiu.github.io/static/js/787.bc7d429a.chunk.js",
+    "static/media/selfie.jpg": "/ZiaoLiu.github.io/static/media/selfie.029bf943a07505f56e56.jpg",
     "static/media/logo.svg": "/ZiaoLiu.github.io/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/ZiaoLiu.github.io/index.html",
-    "main.073c9b0a.css.map": "/ZiaoLiu.github.io/static/css/main.073c9b0a.css.map",
-    "main.8159712b.js.map": "/ZiaoLiu.github.io/static/js/main.8159712b.js.map",
+    "main.884694fd.css.map": "/ZiaoLiu.github.io/static/css/main.884694fd.css.map",
+    "main.39c92267.js.map": "/ZiaoLiu.github.io/static/js/main.39c92267.js.map",
     "787.bc7d429a.chunk.js.map": "/ZiaoLiu.github.io/static/js/787.bc7d429a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.8159712b.js"
+    "static/css/main.884694fd.css",
+    "static/js/main.39c92267.js"
   ]
 }

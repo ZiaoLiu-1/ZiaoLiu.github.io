@@ -1,14 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+import React from 'react';
+
+
 function MyButton() {
-  const [count, setCount] = useState(0);
-  function handleClick(){
-    setCount(count + 1);
-  }
+  const handleClick = () => {
+    window.location.href = "https://github.com/ZiaoLiu-1/Leetcode/tree/main/dynamic-programming/121";
+  };
+  
   return (
     <button onClick={handleClick}>
-      Clicked {count} times
+      Go to Example.com
     </button>
   );
   

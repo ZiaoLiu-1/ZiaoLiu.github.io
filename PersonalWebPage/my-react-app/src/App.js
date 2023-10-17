@@ -1,41 +1,36 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
-import React from 'react';
+import myImage from './selfie.jpg';
+import Calendar from './Calendar';
 
-
-function MyButton() {
+function LeetCodeButton() {
   const handleClick = () => {
     window.location.href = "https://github.com/ZiaoLiu-1/Leetcode/tree/main/dynamic-programming/121";
   };
   
   return (
-    <button onClick={handleClick}>
-      Go to Example.com
+    <button className='niceButton' onClick={handleClick} >
+      My solutions for LeetCode
     </button>
   );
-  
 }
 
 function App() {
+  const [showCalendar, setShowCalendar] = useState(false);
+
   return (
     <div className="App">
+      {showCalendar && <div className="overlay" onClick={() => setShowCalendar(false)}></div>}
+      {showCalendar && <Calendar />}
+      
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <MyButton />
-
-        <MyButton />
+        <img src={myImage} alt="This is me" className="myImageClass" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Welcome to my BLOG!
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <LeetCodeButton />
+        <button  className="niceButton" onClick={() => setShowCalendar(!showCalendar)}>My TODO List</button>
       </header>
     </div>
   );

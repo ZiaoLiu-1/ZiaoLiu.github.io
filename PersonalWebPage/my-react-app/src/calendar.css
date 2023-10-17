@@ -1,0 +1,73 @@
+.calendar {
+    color: rgb(248, 248, 248);
+    width: 300px;
+    height: 240px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    position: fixed;   /* or absolute, depending on your layout and needs */
+    top: 50%;          /* center the calendar vertically */
+    left: 50%;         /* center the calendar horizontally */
+    transform: translate(-50%, -50%); /* this combination with top and left properties will center the element */
+    z-index: 1000;     /* any high value to ensure it's above other content */
+    background-color: rgb(53, 31, 131); /* ensure the background isn't transparent */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(53, 31, 131);
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.header div:first-child,
+.header div:last-child {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.header div:first-child:hover,
+.header div:last-child:hover {
+    opacity: 1;
+}
+
+.body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for 7 days of the week */
+    grid-gap: 1px;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px; /* Adjusting cell height to fit within 300px */
+    background-color: rgb(53, 31, 131);
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+    background-color: #453bdf;
+}
+
+.row {
+    display: contents; /* Makes the row act as if it's not there, only its children will be part of the grid */
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+    z-index: 999; /* just below the calendar's z-index */
+}

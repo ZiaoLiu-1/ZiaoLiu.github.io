@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+.niceButton {
+  background-color: #272b6d;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.niceButton:hover {
+  background-color: #3516c0;
+}
+.myImageClass {
+    max-width: 300px;
+    height: 300px;
+    display: block;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 100px;
+}

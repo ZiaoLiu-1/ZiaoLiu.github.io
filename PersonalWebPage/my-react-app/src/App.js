@@ -6,7 +6,7 @@ import Calendar from './Calendar';
 
 function LeetCodeButton() {
   const handleClick = () => {
-    window.location.href = "https://github.com/ZiaoLiu-1/Leetcode/tree/main/dynamic-programming/121";
+    window.location.href = "https://github.com/ZiaoLiu-1/Leetcode/tree/main";
   };
   
   return (

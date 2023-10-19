@@ -3,6 +3,7 @@ import './App.css';
 import { useState } from 'react';
 import myImage from './selfie.jpg';
 import Calendar from './Calendar';
+import DisplayBoard from './DisplayBoard';
 
 function LeetCodeButton() {
   const handleClick = () => {
@@ -32,6 +33,7 @@ function App() {
         <LeetCodeButton />
         <button  className="niceButton" onClick={() => setShowCalendar(!showCalendar)}>My TODO List</button>
       </header>
+      <DisplayBoard />
     </div>
   );
 }

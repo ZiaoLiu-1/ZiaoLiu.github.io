@@ -5,7 +5,7 @@ import myImage from './selfie.jpg';
 import Calendar from './Calendar';
 import DisplayBoard from './DisplayBoard';
 import NewPage from './NewPage';
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Routes, Navigate } from 'react-router-dom';
 
 
 function LeetCodeButton() {
@@ -38,12 +38,11 @@ function RoutesComponent() {
       <Routes>
         <Route path="/newpage" element={<NewPage />} />
         <Route path="/" element={<HomePage />} />
+        <Route path="*" element={<Navigate to="/" />} />  {/* This is the redirect */}
       </Routes>
     </Router>
-
   );
 }
-
 
 
 function HomePage() {

@@ -4,6 +4,9 @@ import { useState } from 'react';
 import myImage from './selfie.jpg';
 import Calendar from './Calendar';
 import DisplayBoard from './DisplayBoard';
+import NewPage from './NewPage';
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+
 
 function LeetCodeButton() {
   const handleClick = () => {
@@ -17,23 +20,56 @@ function LeetCodeButton() {
   );
 }
 
-function App() {
+
+function RoutesComponent() {
+  return (
+    <Router>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/newpage">New Page</Link>
+          </li>
+        </ul>
+      </nav>
+
+      <Routes>
+        <Route path="/newpage" element={<NewPage />} />
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </Router>
+
+  );
+}
+
+
+
+function HomePage() {
   const [showCalendar, setShowCalendar] = useState(false);
 
   return (
-    <div className="App">
+    <div className="App-header" style={{ padding: '20px' }}>
       {showCalendar && <div className="overlay" onClick={() => setShowCalendar(false)}></div>}
       {showCalendar && <Calendar />}
-      
       <header className="App-header">
         <img src={myImage} alt="This is me" className="myImageClass" />
         <p>
           Welcome to my BLOG!
         </p>
         <LeetCodeButton />
-        <button  className="niceButton" onClick={() => setShowCalendar(!showCalendar)}>My TODO List</button>
+        <button className='niceButton' onClick={() => setShowCalendar(!showCalendar)}>
+          My TODO List
+        </button>
       </header>
-      <DisplayBoard />
+    </div>
+  );
+}
+function App() {
+  return (
+    <div>
+      <RoutesComponent />
     </div>
   );
 }
